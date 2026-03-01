@@ -39,7 +39,7 @@ const ParticleBackground = () => {
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(96, 165, 250, 0.3)";
+        ctx.fillStyle = "rgba(59, 130, 246, 0.2)";
         ctx.fill();
       }
       // Draw connections
@@ -52,7 +52,7 @@ const ParticleBackground = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(96, 165, 250, ${0.08 * (1 - dist / 150)})`;
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.06 * (1 - dist / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
