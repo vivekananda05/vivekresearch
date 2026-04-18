@@ -25,7 +25,8 @@ const HeroSection = () => (
         </p>
         <p className="text-base text-muted-foreground/80 max-w-lg mb-8 leading-relaxed">
           Building Multimodal AI Systems that Align Vision, Language, and Reasoning.
-          Researching vision-language models, hyperspectral imaging, and domain generalization at IIT Bombay.
+          Researching vision-language models, hyperspectral imaging, domain generalization,
+          prompt learning in VLMs, and prompt-based security & privacy in vision tasks at IIT Bombay.
         </p>
         <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
           <Button asChild size="lg">
