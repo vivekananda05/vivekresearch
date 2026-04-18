@@ -24,9 +24,9 @@ const HeroSection = () => (
           Computer Vision & Multimodal Deep Learning
         </p>
         <p className="text-base text-muted-foreground/80 max-w-lg mb-8 leading-relaxed">
-          Building Multimodal AI Systems that Align Vision, Language, and Reasoning.
-          Researching vision-language models, hyperspectral imaging, domain generalization,
-          prompt learning in VLMs, and prompt-based security & privacy in vision tasks at IIT Bombay.
+          Building multimodal AI systems that align vision, language, and reasoning.
+          My research spans vision-language models, prompt learning, domain generalization,
+          and prompt-based security and privacy for visual understanding.
         </p>
         <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
           <Button asChild size="lg">
