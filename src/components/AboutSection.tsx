@@ -39,16 +39,24 @@ const AboutSection = () => (
           transition={{ duration: 0.5 }}
         >
           <p className="text-muted-foreground leading-relaxed mb-6">
-            I am a PhD candidate at IIT Bombay researching at the intersection of computer vision and multimodal AI. 
-            My work focuses on building systems that reason across vision, language, and structured data — from 
-            hyperspectral remote sensing to medical image understanding.
+            I am a PhD candidate in the Centre of Studies in Resources Engineering (CSRE) at IIT Bombay,
+            advised by{" "}
+            <a
+              href="https://biplab-banerjee.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Dr. Biplab Banerjee
+            </a>
+            . My research explores multimodal AI systems that align vision, language, and reasoning,
+            spanning hyperspectral remote sensing and medical image understanding.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Prior to my PhD, I completed my MTech at IIT Kharagpur (GPA 9.36/10), where I developed expertise in 
-            machine learning, deep learning, and scientific computing. My research integrates segmentation,
-            classification, and multimodal reasoning — with a growing emphasis on prompt learning in
-            vision-language models and prompt-based security & privacy for vision tasks — to push the
-            boundaries of trustworthy visual understanding.
+            Previously, I completed my MTech at IIT Kharagpur (GPA 9.36/10), building strong foundations
+            in machine learning, deep learning, and scientific computing. My current work centers on
+            prompt learning in vision-language models and prompt-based security and privacy for vision
+            tasks, advancing trustworthy visual understanding.
           </p>
 
           <div className="flex items-center gap-2 mb-4">
