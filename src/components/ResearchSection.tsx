@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-const projects = [
+const researchProjects = [
   {
     title: "Language-Guided Hyperspectral Image Classification",
     tag: "Ongoing PhD",
     desc: "Integration of CLIP + SAM for pixel-level segmentation, patch-level classification, prompt learning (CoOp, CoCoOp), domain generalization, and uncertainty quantification.",
     tech: ["CLIP", "SAM", "CoOp", "CoCoOp", "Diffusion"],
   },
+];
+
+const otherProjects = [
   {
     title: "Medical-VLM",
     tag: "Vision-Language",
@@ -40,6 +43,33 @@ const projects = [
   },
 ];
 
+type Project = (typeof researchProjects)[number];
+
+const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: i * 0.08, duration: 0.5 }}
+    className="group glass rounded-xl p-6 hover:glow-border transition-all duration-300 flex flex-col"
+  >
+    <span className="text-[10px] font-mono uppercase tracking-wider text-primary mb-3">{p.tag}</span>
+    <h3 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors">{p.title}</h3>
+    <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-4">{p.desc}</p>
+    <div className="flex flex-wrap gap-1.5 mb-4">
+      {p.tech.map((t) => (
+        <span key={t} className="px-2 py-0.5 text-[10px] font-mono rounded bg-background/50 text-muted-foreground border border-border/50">
+          {t}
+        </span>
+      ))}
+    </div>
+    <div className="flex gap-3">
+      <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github size={14} /></a>
+      <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><ExternalLink size={14} /></a>
+    </div>
+  </motion.div>
+);
+
 const ResearchSection = () => (
   <section id="research" className="section-padding bg-secondary/20">
     <div className="container max-w-6xl">
@@ -52,32 +82,22 @@ const ResearchSection = () => (
         Research & Projects
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((p, i) => (
-          <motion.div
-            key={p.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="group glass rounded-xl p-6 hover:glow-border transition-all duration-300 flex flex-col"
-          >
-            <span className="text-[10px] font-mono uppercase tracking-wider text-primary mb-3">{p.tag}</span>
-            <h3 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors">{p.title}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-4">{p.desc}</p>
-            <div className="flex flex-wrap gap-1.5 mb-4">
-              {p.tech.map((t) => (
-                <span key={t} className="px-2 py-0.5 text-[10px] font-mono rounded bg-background/50 text-muted-foreground border border-border/50">
-                  {t}
-                </span>
-              ))}
-            </div>
-            <div className="flex gap-3">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github size={14} /></a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><ExternalLink size={14} /></a>
-            </div>
-          </motion.div>
-        ))}
+      <div className="mb-12">
+        <h3 className="text-xl font-semibold mb-6">Research Projects</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {researchProjects.map((p, i) => (
+            <ProjectCard key={p.title} p={p} i={i} />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold mb-6">Other Projects</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {otherProjects.map((p, i) => (
+            <ProjectCard key={p.title} p={p} i={i} />
+          ))}
+        </div>
       </div>
     </div>
   </section>
