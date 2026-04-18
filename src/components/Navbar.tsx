@@ -7,6 +7,7 @@ const links = [
   { label: "Research", href: "#research" },
   { label: "Publications", href: "#publications" },
   { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
