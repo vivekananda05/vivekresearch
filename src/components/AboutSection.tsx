@@ -49,8 +49,7 @@ const AboutSection = () => (
             >
               Dr. Biplab Banerjee
             </a>
-            . My research explores multimodal AI systems that align vision, language, and reasoning,
-            spanning hyperspectral remote sensing and medical image understanding.
+            . My research explores multimodal AI systems that align vision, language, and reasoning.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
             Previously, I completed my MTech at IIT Kharagpur (GPA 9.36/10), building strong foundations
