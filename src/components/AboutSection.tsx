@@ -3,7 +3,8 @@ import { GraduationCap, Brain } from "lucide-react";
 
 const interests = [
   "Multimodal AI", "Vision-Language Models", "Hyperspectral Image Classification",
-  "Prompt Learning", "Domain Generalization", "Few-shot & Self-supervised Learning",
+  "Prompt Learning in VLMs", "Prompt-based Security & Privacy in Vision",
+  "Domain Generalization", "Few-shot & Self-supervised Learning",
   "Generative Models (GAN, VAE, Diffusion)",
 ];
 
