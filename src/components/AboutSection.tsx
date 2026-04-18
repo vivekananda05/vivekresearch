@@ -45,8 +45,10 @@ const AboutSection = () => (
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
             Prior to my PhD, I completed my MTech at IIT Kharagpur (GPA 9.36/10), where I developed expertise in 
-            machine learning, deep learning, and scientific computing. My research integrates segmentation, 
-            classification, and multimodal reasoning to push the boundaries of visual understanding.
+            machine learning, deep learning, and scientific computing. My research integrates segmentation,
+            classification, and multimodal reasoning — with a growing emphasis on prompt learning in
+            vision-language models and prompt-based security & privacy for vision tasks — to push the
+            boundaries of trustworthy visual understanding.
           </p>
 
           <div className="flex items-center gap-2 mb-4">
