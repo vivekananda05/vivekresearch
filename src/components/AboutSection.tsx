@@ -8,7 +8,7 @@ const interests = [
   "Security & Privacy in Vision",
   "Domain Generalization",
   "Hyperspectral Imaging",
-  "Few-shot & Self-supervised Learning",
+  
   "Generative Models",
 ];
 
