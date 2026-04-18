@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "./ParticleBackground";
-import profileImg from "@/assets/profile.png";
+import profileImg from "@/assets/profile.webp";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
