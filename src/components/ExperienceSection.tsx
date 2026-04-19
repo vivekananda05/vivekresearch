@@ -31,15 +31,15 @@ const ExperienceSection = () => (
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="w-1 h-1 rounded-full bg-primary mt-2 shrink-0" />
-                Built CNN autoencoder for industrial microstructure image compression
+                Designed and implemented an 8-layer Convolutional Autoencoder from scratch for end-to-end compression and decompression of industrial microstructural images.
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-1 h-1 rounded-full bg-primary mt-2 shrink-0" />
-                Optimized hyperparameters and integrated ResNet/DenseNet skip connections
+                Enhanced reconstruction fidelity through systematic hyperparameter optimization and integration of ResNet and DenseNet skip connections within the encoder–decoder pipeline.
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-1 h-1 rounded-full bg-primary mt-2 shrink-0" />
-                Validated results with MATLAB contour overlay for industrial deployment
+                Validated reconstruction accuracy using MATLAB-based contour overlay analysis, ensuring reliability for downstream industrial deployment.
               </li>
             </ul>
           </div>
