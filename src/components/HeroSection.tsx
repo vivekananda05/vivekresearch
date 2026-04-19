@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, FileText, Mail } from "lucide-react";
+import { ArrowDown, FileText, Mail, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "./ParticleBackground";
 import profileImg from "@/assets/profile.webp";
@@ -35,8 +35,13 @@ const HeroSection = () => (
             </a>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" download>
+            <a href="/CV.pdf" download>
               <FileText size={16} className="mr-2" /> Download CV
+            </a>
+          </Button>
+          <Button variant="secondary" size="lg" asChild>
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
+              <Eye size={16} className="mr-2" /> View CV
             </a>
           </Button>
           <Button variant="ghost" size="lg" asChild>
