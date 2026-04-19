@@ -58,7 +58,10 @@ const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
     <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-4">{p.desc}</p>
     <div className="flex flex-wrap gap-1.5 mb-4">
       {p.tech.map((t) => (
-        <span key={t} className="px-2 py-0.5 text-[10px] font-mono rounded bg-background/50 text-muted-foreground border border-border/50">
+        <span
+          key={t}
+          className="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-200"
+        >
           {t}
         </span>
       ))}
