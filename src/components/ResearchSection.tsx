@@ -3,10 +3,10 @@ import { ExternalLink, Github } from "lucide-react";
 
 const researchProjects = [
   {
-    title: "Language-Guided Hyperspectral Image Classification",
+    title: "Dual Patch-to-Pixel Prompt Learning in HSI Cross-Scene Generalization",
     tag: "Ongoing PhD",
-    desc: "Integration of CLIP + SAM for pixel-level segmentation, patch-level classification, prompt learning (CoOp, CoCoOp), domain generalization, and uncertainty quantification.",
-    tech: ["CLIP", "SAM", "CoOp", "CoCoOp", "Diffusion"],
+    desc: "Developed a dual-branch prompt learning framework for hyperspectral cross-scene classification, integrating patch-level (CLIP) and pixel-level (SAM) representations with cross-scale alignment via FiLM modulation. Proposed Self-Prompt Guided LoRA (PG-LoRA) for dynamic, context-aware adaptation of text encoders, enabling efficient parameter tuning conditioned on learned prompts. Introduced a Hierarchical Orthogonality Regularizer (HOR) to enforce diversity between dual encoders at prompt, weight, and projection levels, improving generalization. Designed a gated Product-of-Experts fusion mechanism to combine multi-branch logits, enhancing classification robustness across varying spectral scenes.",
+    tech: ["CLIP", "SAM", "PG-LoRA", "FiLM", "HOR", "PoE Fusion"],
   },
 ];
 
