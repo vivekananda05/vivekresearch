@@ -5,6 +5,7 @@ const researchProjects = [
   {
     title: "Dual Patch-to-Pixel Prompt Learning in HSI Cross-Scene Generalization",
     tag: "Ongoing PhD",
+    venue: "Submitting to BMVC 2026",
     desc: "Developed a dual-branch prompt learning framework for hyperspectral cross-scene classification, integrating patch-level (CLIP) and pixel-level (SAM) representations with cross-scale alignment via FiLM modulation. Proposed Self-Prompt Guided LoRA (PG-LoRA) for dynamic, context-aware adaptation of text encoders, enabling efficient parameter tuning conditioned on learned prompts. Introduced a Hierarchical Orthogonality Regularizer (HOR) to enforce diversity between dual encoders at prompt, weight, and projection levels, improving generalization. Designed a gated Product-of-Experts fusion mechanism to combine multi-branch logits, enhancing classification robustness across varying spectral scenes.",
     tech: ["CLIP", "SAM", "PG-LoRA", "FiLM", "HOR", "PoE Fusion"],
   },
@@ -43,7 +44,13 @@ const otherProjects = [
   },
 ];
 
-type Project = (typeof researchProjects)[number];
+type Project = {
+  title: string;
+  tag: string;
+  venue?: string;
+  desc: string;
+  tech: string[];
+};
 
 const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
   <motion.div
@@ -53,7 +60,14 @@ const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
     transition={{ delay: i * 0.08, duration: 0.5 }}
     className="group glass rounded-xl p-6 hover:glow-border transition-all duration-300 flex flex-col"
   >
-    <span className="text-[10px] font-mono uppercase tracking-wider text-primary mb-3">{p.tag}</span>
+    <div className="flex items-center gap-2 flex-wrap mb-3">
+      <span className="text-[10px] font-mono uppercase tracking-wider text-primary">{p.tag}</span>
+      {p.venue && (
+        <span className="px-2 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider rounded-full bg-gradient-to-r from-primary to-primary/70 text-primary-foreground shadow-sm">
+          {p.venue}
+        </span>
+      )}
+    </div>
     <h3 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors">{p.title}</h3>
     <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-4">{p.desc}</p>
     <div className="flex flex-wrap gap-1.5 mb-4">
