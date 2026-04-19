@@ -35,7 +35,7 @@ const HeroSection = () => (
             </a>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="#">
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" download>
               <FileText size={16} className="mr-2" /> Download CV
             </a>
           </Button>
