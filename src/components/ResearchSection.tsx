@@ -17,6 +17,7 @@ const otherProjects = [
     tag: "Vision-Language",
     desc: "ALIGNVLM convex projection with ViT-Base/16 + DistilGPT2 for chest X-ray report generation on the IU X-ray dataset.",
     tech: ["ViT", "DistilGPT2", "ALIGNVLM"],
+    github: "https://github.com/vivekananda05/medical-vlm",
   },
   {
     title: "Multi-task Image Restoration",
@@ -50,6 +51,8 @@ type Project = {
   venue?: string;
   desc: string;
   tech: string[];
+  github?: string;
+  link?: string;
 };
 
 const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
@@ -81,8 +84,16 @@ const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
       ))}
     </div>
     <div className="flex gap-3">
-      <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github size={14} /></a>
-      <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><ExternalLink size={14} /></a>
+      {p.github && (
+        <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`${p.title} GitHub repository`} className="text-muted-foreground hover:text-primary transition-colors">
+          <Github size={14} />
+        </a>
+      )}
+      {p.link && (
+        <a href={p.link} target="_blank" rel="noopener noreferrer" aria-label={`${p.title} external link`} className="text-muted-foreground hover:text-primary transition-colors">
+          <ExternalLink size={14} />
+        </a>
+      )}
     </div>
   </motion.div>
 );
