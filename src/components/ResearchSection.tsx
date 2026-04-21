@@ -38,6 +38,7 @@ const otherProjects = [
     tag: "MTech Thesis",
     desc: "Feature engineering via Genetic Programming with Lasso, Ridge, Random Forest ensemble modeling and regularization.",
     tech: ["Genetic Programming", "Ensemble", "Ridge"],
+    github: "https://github.com/vivekananda05/Genetic-Programming",
   },
   {
     title: "ML Research – Tata Steel R&D",
