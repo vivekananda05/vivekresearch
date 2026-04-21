@@ -45,6 +45,7 @@ const otherProjects = [
     tag: "Industry",
     desc: "8-layer CNN autoencoder for microstructural image compression with ResNet/DenseNet skip connections and MATLAB contour overlay validation.",
     tech: ["CNN", "Autoencoder", "ResNet", "DenseNet"],
+    github: "https://github.com/vivekananda05/Convolutional-Autoencoder/tree/main",
   },
 ];
 
