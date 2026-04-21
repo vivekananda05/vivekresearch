@@ -51,6 +51,8 @@ type Project = {
   venue?: string;
   desc: string;
   tech: string[];
+  github?: string;
+  link?: string;
 };
 
 const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
