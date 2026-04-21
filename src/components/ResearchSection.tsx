@@ -24,6 +24,7 @@ const otherProjects = [
     tag: "Computer Vision",
     desc: "DINOv3-Small frozen encoder with LoRA-based fine-tuning for denoising + inpainting via cross-attention shared latent space.",
     tech: ["DINOv3", "LoRA", "Cross-Attention"],
+    github: "https://github.com/vivekananda05/multitask-dino",
   },
   {
     title: "Few-shot Learning with MAML",
