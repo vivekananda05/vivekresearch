@@ -31,6 +31,7 @@ const otherProjects = [
     tag: "Meta-Learning",
     desc: "MobileNetV3-Small backbone for CIFAR-100 → CUB-200-2011 adaptation in 10-way 1-shot setting.",
     tech: ["MAML", "MobileNetV3", "Few-shot"],
+    github: "https://github.com/vivekananda05/Fsl-maml",
   },
   {
     title: "Genetic Programming for Chromium Recovery",
