@@ -84,8 +84,16 @@ const ProjectCard = ({ p, i }: { p: Project; i: number }) => (
       ))}
     </div>
     <div className="flex gap-3">
-      <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github size={14} /></a>
-      <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><ExternalLink size={14} /></a>
+      {p.github && (
+        <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`${p.title} GitHub repository`} className="text-muted-foreground hover:text-primary transition-colors">
+          <Github size={14} />
+        </a>
+      )}
+      {p.link && (
+        <a href={p.link} target="_blank" rel="noopener noreferrer" aria-label={`${p.title} external link`} className="text-muted-foreground hover:text-primary transition-colors">
+          <ExternalLink size={14} />
+        </a>
+      )}
     </div>
   </motion.div>
 );
