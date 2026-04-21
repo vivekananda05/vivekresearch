@@ -19,7 +19,6 @@ deploy:
 runs-on: ubuntu-latest
 
 ```
-# ✅ correct placement
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
