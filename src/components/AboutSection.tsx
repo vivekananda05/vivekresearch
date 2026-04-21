@@ -1,15 +1,24 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Brain } from "lucide-react";
+import {
+  GraduationCap,
+  Brain,
+  Layers,
+  Eye,
+  Sparkles,
+  ShieldCheck,
+  Globe2,
+  Radar,
+  Wand2,
+} from "lucide-react";
 
 const interests = [
-  "Multimodal AI",
-  "Vision-Language Models",
-  "Prompt Learning",
-  "Security & Privacy in Vision",
-  "Domain Generalization",
-  "Hyperspectral Imaging",
-  
-  "Generative Models",
+  { label: "Multimodal AI", icon: Layers },
+  { label: "Vision-Language Models", icon: Eye },
+  { label: "Prompt Learning", icon: Sparkles },
+  { label: "Security & Privacy in Vision", icon: ShieldCheck },
+  { label: "Domain Generalization", icon: Globe2 },
+  { label: "Hyperspectral Imaging", icon: Radar },
+  { label: "Generative Models", icon: Wand2 },
 ];
 
 const education = [
