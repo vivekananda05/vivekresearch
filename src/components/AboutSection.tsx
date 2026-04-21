@@ -1,15 +1,24 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Brain } from "lucide-react";
+import {
+  GraduationCap,
+  Brain,
+  Layers,
+  Eye,
+  Sparkles,
+  ShieldCheck,
+  Globe2,
+  Radar,
+  Wand2,
+} from "lucide-react";
 
 const interests = [
-  "Multimodal AI",
-  "Vision-Language Models",
-  "Prompt Learning",
-  "Security & Privacy in Vision",
-  "Domain Generalization",
-  "Hyperspectral Imaging",
-  
-  "Generative Models",
+  { label: "Multimodal AI", icon: Layers },
+  { label: "Vision-Language Models", icon: Eye },
+  { label: "Prompt Learning", icon: Sparkles },
+  { label: "Security & Privacy in Vision", icon: ShieldCheck },
+  { label: "Domain Generalization", icon: Globe2 },
+  { label: "Hyperspectral Imaging", icon: Radar },
+  { label: "Generative Models", icon: Wand2 },
 ];
 
 const education = [
@@ -66,20 +75,28 @@ const AboutSection = () => (
             <Brain size={18} className="text-primary" />
             <h3 className="font-semibold">Research Interests</h3>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {interests.map((t, i) => (
-              <motion.span
-                key={t}
-                custom={i}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="px-3 py-1 text-xs font-mono rounded-full bg-secondary text-secondary-foreground border border-border"
-              >
-                {t}
-              </motion.span>
-            ))}
+          <div className="grid grid-cols-2 gap-2.5">
+            {interests.map((t, i) => {
+              const Icon = t.icon;
+              return (
+                <motion.div
+                  key={t.label}
+                  custom={i}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="group relative flex items-center gap-2.5 px-3 py-2.5 rounded-lg bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 hover:border-primary/60 hover:from-primary/10 hover:shadow-[0_0_20px_hsl(var(--primary)/0.15)] transition-all duration-300 overflow-hidden"
+                >
+                  <div className="flex items-center justify-center w-7 h-7 rounded-md bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
+                    <Icon size={14} />
+                  </div>
+                  <span className="text-xs font-medium text-foreground/90 group-hover:text-primary transition-colors leading-tight">
+                    {t.label}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
