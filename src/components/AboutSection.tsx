@@ -53,7 +53,7 @@ const AboutSection = () => (
         >
           <p className="text-muted-foreground leading-relaxed mb-6">
             I am a PhD candidate in the Centre of Studies in Resources Engineering (CSRE) at IIT Bombay,
-            advised by{" "}
+            under the supervision of{" "}
             <a
               href="https://biplab-banerjee.github.io/"
               target="_blank"
