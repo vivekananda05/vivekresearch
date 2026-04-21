@@ -17,6 +17,7 @@ const otherProjects = [
     tag: "Vision-Language",
     desc: "ALIGNVLM convex projection with ViT-Base/16 + DistilGPT2 for chest X-ray report generation on the IU X-ray dataset.",
     tech: ["ViT", "DistilGPT2", "ALIGNVLM"],
+    github: "https://github.com/vivekananda05/medical-vlm",
   },
   {
     title: "Multi-task Image Restoration",
